@@ -1,13 +1,19 @@
 :root {
     --nav-width: 40px;
+    --header-height: 300px;
     --footer-height: 80px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     width: 100vw;
     height: 100vh;
-    margin: 0;
-    padding: 0;
+    font-family: 'Lato';
 }
 
 nav {
@@ -21,7 +27,7 @@ section {
     float: left;
     height: calc(100% - var(--footer-height));
     width: calc(100% - var(--nav-width));
-    background-color: rgb(255, 0, 0);
+
 }
 
 footer {
@@ -33,11 +39,11 @@ footer {
 
 
 header {
-    height: 30%;
+    height: var(--header-height);
     background-color: rgb(69, 69, 69);
 }
 
 article {
-    height: 70%;
+    height: calc(100% - var(--header-height));
     background-color: rgb(255, 255, 255);
 }
