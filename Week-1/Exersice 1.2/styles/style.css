@@ -1,0 +1,43 @@
+:root {
+    --nav-width: 40px;
+    --footer-height: 80px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    float: left;
+    height: calc(100% - var(--footer-height));
+    width: var(--nav-width);
+    background-color: rgb(240, 240, 240);
+}
+
+section {
+    float: left;
+    height: calc(100% - var(--footer-height));
+    width: calc(100% - var(--nav-width));
+    background-color: rgb(255, 0, 0);
+}
+
+footer {
+    float: left;
+    height: var(--footer-height);
+    width: 100%;
+    background-color: rgb(67, 104, 155);
+}
+
+
+header {
+    height: 30%;
+    background-color: rgb(69, 69, 69);
+}
+
+article {
+    height: 70%;
+    background-color: rgb(255, 255, 255);
+}
