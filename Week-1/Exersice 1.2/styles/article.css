@@ -1,0 +1,25 @@
+article {
+    padding: 30px 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    text-align: left;
+    padding: 8px;
+    width: 25%;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(240, 240, 240);
+}
+
+table button {
+    background-color: white;
+    color: blue;
+    border: 1px solid black;
+    padding: 2px;
+}
