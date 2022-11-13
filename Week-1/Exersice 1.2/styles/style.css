@@ -1,7 +1,7 @@
 :root {
     --nav-width: 40px;
     --header-height: 300px;
-    --footer-height: 80px;
+    --bottom-bar-height: 80px;
 }
 
 * {
@@ -18,21 +18,21 @@ body {
 
 nav {
     float: left;
-    height: calc(100% - var(--footer-height));
+    height: calc(100% - var(--bottom-bar-height));
     width: var(--nav-width);
     background-color: rgb(240, 240, 240);
 }
 
 section {
     float: left;
-    height: calc(100% - var(--footer-height));
+    height: calc(100% - var(--bottom-bar-height));
     width: calc(100% - var(--nav-width));
 
 }
 
-footer {
+#bottom-bar {
     float: left;
-    height: var(--footer-height);
+    height: var(--bottom-bar-height);
     width: 100%;
     background-color: rgb(67, 104, 155);
 }
