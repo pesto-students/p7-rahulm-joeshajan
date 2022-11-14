@@ -30,7 +30,7 @@ section {
 
 }
 
-#bottom-bar {
+.bottom-bar {
     float: left;
     height: var(--bottom-bar-height);
     width: 100%;

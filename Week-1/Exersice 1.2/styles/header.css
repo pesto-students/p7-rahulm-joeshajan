@@ -4,17 +4,17 @@ header {
     padding: 40px;
 }
 
-#header-img {
+.header-img {
     aspect-ratio: 1 / 1;
     height: 100%;
 }
 
-#header-img img {
+.header-img img {
     width: 100%;
     height: 100%;
 }
 
-#description {
+.description {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -22,25 +22,25 @@ header {
     color: rgb(255, 254, 254);
 }
 
-#description-top :first-child {
+.description-top :first-child {
     margin-bottom: 15px;
     font-weight: 500;
 }
 
-#description-top>p {
+.description-top>p {
     font-size: 13px;
     margin-bottom: 5px;
 }
 
-#description-bottom {
+.description-bottom {
     display: flex;
 }
 
-#description-bottom>p {
+.description-bottom>p {
     font-size: 11px;
     margin-right: 20px;
 }
 
-#description-bottom>p>i {
+.description-bottom>p>i {
     margin-right: 5px;
 }
