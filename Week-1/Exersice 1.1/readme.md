@@ -60,3 +60,22 @@ The algorithm's output is an HTML token. The algorithm is expressed as a state m
 **Script** : The model of the web is synchronous. Authors expect scripts to be parsed and executed immediately when the parser reaches a \<script\> tag. The parsing of the document halts until the script has been executed. If the script is external then the resource must first be fetched from the network - this is also done synchronously, and parsing halts until the resource is fetched.
 
 **stylesheet** : Style sheets on the other hand have a different model. Conceptually it seems that since style sheets don't change the DOM tree, there is no reason to wait for them and stop the document parsing. There is an issue, though, of scripts asking for style information during the document parsing stage. If the style is not loaded and parsed yet, the script will get wrong answers and apparently this caused lots of problems.
+
+## defer attribute in script tag
+
+The defer attribute tells the browser not to wait for the script. Instead, the browser will continue to process the HTML, build DOM. The script loads “in the background”, and then runs when the DOM is fully built.
+
+## async attribute in script tag
+
+The async attribute is somewhat like defer. It also makes the script non-blocking. But it has important differences in the behavior.
+
+The async attribute means that a script is completely independent:
+
+- The browser doesn’t block on async scripts (like defer).
+- Other scripts don’t wait for async scripts, and async scripts don’t wait for them.
+
+async scripts load in the background and run when ready. The DOM and other scripts don’t wait for them, and they don’t wait for anything.
+
+In practice, defer is used for scripts that need the whole DOM and/or their relative execution order is important.
+
+And async is used for independent scripts, like counters or ads. And their relative execution order does not matter.
