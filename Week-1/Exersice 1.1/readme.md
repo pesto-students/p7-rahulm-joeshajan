@@ -37,6 +37,20 @@ The different steps of the rendering engine
 
 Parsing a document means translating it to a structure the code can use. The result of parsing is usually a tree of nodes that represent the structure of the document. This is called a parse tree or a syntax tree.
 
+Parsing can be separated into two sub processes: lexical analysis and syntax analysis.
+
+Lexical analysis is the process of breaking the input into tokens. Tokens are the language vocabulary: the collection of valid building blocks.
+
+Parsers usually divide the work between two components: the **lexer** (sometimes called tokenizer) that is responsible for breaking the input into valid tokens, and the **parser** that is responsible for constructing the parse tree by analyzing the document structure according to the language syntax rules.
+
+The parsing process is iterative. The parser will usually ask the lexer for a new token and try to match the token with one of the syntax rules. If a rule is matched, a node corresponding to the token will be added to the parse tree and the parser will ask for another token.
+
+If no rule matches, the parser will store the token internally, and keep asking for tokens until a rule matching all the internally stored tokens is found. If no rule is found then the parser will raise an exception. This means the document was not valid and contained syntax errors.
+
+## The tokenization algorithm
+
+The algorithm's output is an HTML token. The algorithm is expressed as a state machine. Each state consumes one or more characters of the input stream and updates the next state according to those characters. The decision is influenced by the current tokenization state and by the tree construction state.
+
 **Parsing HTML** : conventional parser topics do not apply to HTML.HTML cannot easily be defined by a context-free grammar that parsers need. There is a formal format for defining HTML - DTD (Document Type Definition) - but it is not context-free grammar.
 
 **Parsing CSS** : WebKit uses Flex and Bison parser generators to create parsers automatically from the CSS grammar files.
