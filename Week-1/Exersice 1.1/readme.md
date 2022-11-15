@@ -31,6 +31,30 @@ The different steps of the rendering engine
 3. **Layout the render tree:** When the renderer is created and added to the tree, it does not have a position and size. Calculating these values is called layout or reflow. HTML uses a flow-based layout. The layout is a recursive process. It begins at the root renderer, which corresponds to the \<html\> element of the HTML document. The layout continues recursively through some or all of the frame hierarchy.
 4. **Painting:** In the painting stage, the render tree is traversed and the renderer's "paint()" method is called to display content on the screen. The painting uses the UI infrastructure component.
 
+## DOM Tree
+
+First, parse the bytes received from the server and generate characters, who are in charge to perform that process is called Tokenizer.
+
+The Tokenizing starts to parse each Start Tags and the End tags and convert to Nodes until it will end up creating the entire Document Objects Models(DOM). The DOM is the full representation of the HTML markers, each individual Node contains all the properties related and needed to represent it.
+
+## CSS Object Model (CSSOM)
+
+The CSS Object model creation it’s generated like the DOM but with some differences.
+
+when the rendering engine is constructing the dom from the HTML file it encounters a link tag referring to the CSS stylesheet, Once the construction of the Dom tree is completed, CSS is mentioned in all the sources i.e external, inline,user-agent etc. is read by the engine.
+
+Each node in the custom tree refers to a style element that is applied to a dom element. A browser also contains its user agent stylesheet, whenever CSS object model is created, first CSS properties for dom element is created by overriding its user agent stylesheet, If the CSS property of an HTML element is not defined in both the stylesheet of the developer and browser, then it inherits the property of its parent element.
+
+## Render Tree
+
+The final render is constructed by merging both the DOM and CSSOM tree. Render tree contains all the information of the visible content including their CSS style information. The render tree does not include script, meta tags etc. as they are not included in the render output. The dom elements which are hidden through the CSS property are also excluded from the render tree, such as elements with display: none property. But the elements with property visibility: none or opacity:0 will be added on the render tree and will also take space on the screen. For every node, a matching custom property is applied. The final render tree has then proceeded to the layout stage.
+
+## Render blocking
+
+Render blocking resources are static files, such as fonts, HTML, CSS, and JavaScript files, that are vital to the process of rendering a web page. When the browser encounters a render blocking resource, it stops downloading the rest of the resources until these critical files are processed. In the meantime, the entire rendering process is put on hold.
+
+By default, CSS is treated as a render blocking resource, which means that the browser won't render any processed content until the CSSOM is constructed.
+
 ![How rendering works](./images/How-rendering-works.png?raw=true "Title")
 
 # Parsing
