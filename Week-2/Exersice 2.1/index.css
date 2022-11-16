@@ -11,10 +11,11 @@ body {
 
 header {
     height: 200px;
-    background-color: lightcyan;
+    background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 section {
@@ -79,12 +80,13 @@ article>div {
 }
 
 article {
+    color: gray;
     max-width: 960px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: minmax(150px, auto);
     margin: 20px auto;
-    gap: 30px;
+    gap: 10px;
     grid-template-areas:
         "article1"
         "article2"
