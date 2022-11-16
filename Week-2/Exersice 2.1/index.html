@@ -2,51 +2,155 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="form.css" />
 </head>
 
 <body>
     <header>
-        <h1>what is internet</h1>
+        <h1>What is Internet</h1>
     </header>
+
     <article>
         <div class="article-1">
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-            Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-            Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-            Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable
-            source.
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It
+            has roots in a piece of classical Latin literature from 45 BC, making it
+            over 2000 years old. Richard McClintock, a Latin professor at
+            Hampden-Sydney College in Virginia, looked up one of the more obscure
+            Latin words, consectetur, from a Lorem Ipsum passage, and going through
+            the cites of the word in classical literature, discovered the
+            undoubtable source.
         </div>
         <div class="image">
             <img src="https://cdn.britannica.com/88/129488-131-09AB5E83/Internet-blue-screen-blog-society-history-media-2009.jpg"
-                alt="web thumbnail image">
+                alt="web thumbnail image" />
         </div>
-        <div class="article-2"> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-            piece of classical
-            Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-            Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-            Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable
-            source.</div>
-        <div class="article-3"> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-            piece of classical
-            Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-            Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-            Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable
-            source.</div>
-        <div class="article-4"> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-            piece of classical
-            Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-            Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-            Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable
-            source.</div>
+        <div class="article-2">
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It
+            has roots in a piece of classical Latin literature from 45 BC, making it
+            over 2000 years old. Richard McClintock, a Latin professor at
+            Hampden-Sydney College in Virginia, looked up one of the more obscure
+            Latin words, consectetur, from a Lorem Ipsum passage, and going through
+            the cites of the word in classical literature, discovered the
+            undoubtable source.
+        </div>
+        <div class="article-3">
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It
+            has roots in a piece of classical Latin literature from 45 BC, making it
+            over 2000 years old. Richard McClintock, a Latin professor at
+            Hampden-Sydney College in Virginia, looked up one of the more obscure
+            Latin words, consectetur, from a Lorem Ipsum passage, and going through
+            the cites of the word in classical literature, discovered the
+            undoubtable source.
+        </div>
+        <div class="article-4">
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It
+            has roots in a piece of classical Latin literature from 45 BC, making it
+            over 2000 years old. Richard McClintock, a Latin professor at
+            Hampden-Sydney College in Virginia, looked up one of the more obscure
+            Latin words, consectetur, from a Lorem Ipsum passage, and going through
+            the cites of the word in classical literature, discovered the
+            undoubtable source.
+        </div>
     </article>
-    <section>
 
-        <h1>form section</h1>
+    <section>
+        <h2>Subscribe to newsletter</h2>
+        <form>
+
+            <!-- title -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="Title">Title</label>
+                </div>
+                <div class="col-75">
+                    <input type="radio" id="Mr" name="gender" value="Mr" />
+                    <label for="Mr">Mr</label>
+
+                    <input type="radio" id="Mrs" name="gender" value="Mrs" />
+                    <label for="Mrs">Mrs</label>
+
+                    <input type="radio" id="Miss" name="gender" value="Miss" />
+                    <label for="Miss">Miss</label>
+                </div>
+            </div>
+
+            <!-- first name -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="Your name.." required />
+                </div>
+            </div>
+
+            <!-- last name -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">Last Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required />
+                </div>
+            </div>
+
+            <!-- email -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="email">Email</label>
+                </div>
+                <div class="col-75">
+                    <input type="email" id="emal" name="email" placeholder="example@gmail.com" required />
+                </div>
+            </div>
+
+            <!-- phone no -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="phone">Phone no</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" id="phone" name="phone" placeholder="9042325434" min="10" max="10" required />
+                </div>
+            </div>
+
+            <!-- country -->
+            <div class="row">
+                <div class="col-25">
+                    <label for="country">Country</label>
+                </div>
+                <div class="col-75">
+                    <select id="country" name="country" required>
+                        <option value="india">India</option>
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- terms and conditions checkbox -->
+            <div class="row">
+                <div class="col-25"></div>
+                <div class="col-75">
+                    <input type="checkbox" id="termsandconditions" name="termsandconditions" value="selected"
+                        required />
+                    <label for="termsandconditions">
+                        I agree to <a href="http://google.com/">terms and conditions</a>
+                    </label>
+                </div>
+            </div>
+
+            <div class="button">
+                <input type="submit" value="Submit" />
+            </div>
+
+        </form>
     </section>
     <footer>
         <h1>footer</h1>
