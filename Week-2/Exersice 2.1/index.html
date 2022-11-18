@@ -1,146 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./styles/index.css" />
     <link rel="stylesheet" href="./styles/form.css" />
-    <link rel="stylesheet" href="./styles/article.css">
-</head>
+    <link rel="stylesheet" href="./styles/article.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>What is Internet</h1>
+      <h1>What is Internet</h1>
     </header>
 
     <article>
-        <div>
-            The Internet, sometimes called simply "the Net," is a worldwide system of computer networks -- a network of
-            networks in which users at any one computer can, if they have permission, get information from any other
-            computer (and sometimes talk directly to users at other computers).
-        </div>
-        <div>
-            <img src="https://cdn.britannica.com/88/129488-131-09AB5E83/Internet-blue-screen-blog-society-history-media-2009.jpg"
-                alt="web thumbnail image" />
-        </div>
-        <div>
-            The original aim was to create a network that would allow users of a research computer at one university to
-            "talk to" research computers at other universities. A side benefit of ARPANet's design was that, because
-            messages could be routed or rerouted in more than one direction.
-        </div>
-        <div>
-            Physically, the Internet uses a portion of the total resources of the currently existing public
-            telecommunication networks. Technically, what distinguishes the Internet is its use of a set of protocols
-            called Transmission Control Protocol/Internet Protocol (TCP/IP).
-            The protocols are also responsible for translating the alphabetic text of a message into electronic signals
-            that can be transmitted over the Internet, and then back again into legible, alphabetic text.
-        </div>
-        <div>
-            The Internet can be seen as having two major components: network protocols and hardware. The protocols, such
-            as the TCP/IP suite, present sets of rules that devices must follow in order to complete tasks.
-        </div>
+      <div>
+        The Internet, sometimes called simply "the Net," is a worldwide system
+        of computer networks -- a network of networks in which users at any one
+        computer can, if they have permission, get information from any other
+        computer (and sometimes talk directly to users at other computers).
+      </div>
+      <div>
+        <img
+          src="https://cdn.britannica.com/88/129488-131-09AB5E83/Internet-blue-screen-blog-society-history-media-2009.jpg"
+          alt="web thumbnail image"
+        />
+      </div>
+      <div>
+        The original aim was to create a network that would allow users of a
+        research computer at one university to "talk to" research computers at
+        other universities. A side benefit of ARPANet's design was that, because
+        messages could be routed or rerouted in more than one direction.
+      </div>
+      <div>
+        Physically, the Internet uses a portion of the total resources of the
+        currently existing public telecommunication networks. Technically, what
+        distinguishes the Internet is its use of a set of protocols called
+        Transmission Control Protocol/Internet Protocol (TCP/IP). The protocols
+        are also responsible for translating the alphabetic text of a message
+        into electronic signals that can be transmitted over the Internet, and
+        then back again into legible, alphabetic text.
+      </div>
+      <div>
+        The Internet can be seen as having two major components: network
+        protocols and hardware. The protocols, such as the TCP/IP suite, present
+        sets of rules that devices must follow in order to complete tasks.
+      </div>
     </article>
 
     <section>
-        <h2>Subscribe</h2>
-        <form>
+      <h2>Subscribe</h2>
+      <form>
+        <!-- title -->
+        <div class="row">
+          <div class="col-25">
+            <label for="Title">Title</label>
+          </div>
+          <div class="col-75">
+            <input type="radio" id="Mr" name="gender" value="Mr" />
+            <label for="Mr">Mr</label>
 
-            <!-- title -->
-            <div class="row">
-                <div class="col-25">
-                    <label for="Title">Title</label>
-                </div>
-                <div class="col-75">
-                    <input type="radio" id="Mr" name="gender" value="Mr" />
-                    <label for="Mr">Mr</label>
+            <input type="radio" id="Mrs" name="gender" value="Mrs" />
+            <label for="Mrs">Mrs</label>
 
-                    <input type="radio" id="Mrs" name="gender" value="Mrs" />
-                    <label for="Mrs">Mrs</label>
+            <input type="radio" id="Miss" name="gender" value="Miss" />
+            <label for="Miss">Miss</label>
+          </div>
+        </div>
 
-                    <input type="radio" id="Miss" name="gender" value="Miss" />
-                    <label for="Miss">Miss</label>
-                </div>
-            </div>
+        <!-- first name -->
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">First Name</label>
+          </div>
+          <div class="col-75">
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Your name.."
+              required
+            />
+          </div>
+        </div>
 
-            <!-- first name -->
-            <div class="row">
-                <div class="col-25">
-                    <label for="fname">First Name</label>
-                </div>
-                <div class="col-75">
-                    <input type="text" id="fname" name="firstname" placeholder="Your name.." required />
-                </div>
-            </div>
+        <!-- last name -->
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Last Name</label>
+          </div>
+          <div class="col-75">
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Your last name.."
+              required
+            />
+          </div>
+        </div>
 
-            <!-- last name -->
-            <div class="row">
-                <div class="col-25">
-                    <label for="lname">Last Name</label>
-                </div>
-                <div class="col-75">
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required />
-                </div>
-            </div>
+        <!-- email -->
+        <div class="row">
+          <div class="col-25">
+            <label for="email">Email</label>
+          </div>
+          <div class="col-75">
+            <input
+              type="email"
+              id="emal"
+              name="email"
+              placeholder="example@gmail.com"
+              required
+            />
+          </div>
+        </div>
 
-            <!-- email -->
-            <div class="row">
-                <div class="col-25">
-                    <label for="email">Email</label>
-                </div>
-                <div class="col-75">
-                    <input type="email" id="emal" name="email" placeholder="example@gmail.com" required />
-                </div>
-            </div>
+        <!-- phone no -->
+        <div class="row">
+          <div class="col-25">
+            <label for="phone">Phone no</label>
+          </div>
+          <div class="col-75">
+            <input
+              type="number"
+              id="phone"
+              name="phone"
+              placeholder="9042325434"
+              min="10"
+              max="10"
+              required
+            />
+          </div>
+        </div>
 
-            <!-- phone no -->
-            <div class="row">
-                <div class="col-25">
-                    <label for="phone">Phone no</label>
-                </div>
-                <div class="col-75">
-                    <input type="number" id="phone" name="phone" placeholder="9042325434" min="10" max="10" required />
-                </div>
-            </div>
+        <!-- country -->
+        <div class="row">
+          <div class="col-25">
+            <label for="country">Country</label>
+          </div>
+          <div class="col-75">
+            <select id="country" name="country" required>
+              <option value="india">India</option>
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+            </select>
+          </div>
+        </div>
 
-            <!-- country -->
-            <div class="row">
-                <div class="col-25">
-                    <label for="country">Country</label>
-                </div>
-                <div class="col-75">
-                    <select id="country" name="country" required>
-                        <option value="india">India</option>
-                        <option value="australia">Australia</option>
-                        <option value="canada">Canada</option>
-                        <option value="usa">USA</option>
-                    </select>
-                </div>
-            </div>
+        <!-- terms and conditions checkbox -->
+        <div class="row">
+          <div class="col-25"></div>
+          <div class="col-75">
+            <input
+              type="checkbox"
+              id="termsandconditions"
+              name="termsandconditions"
+              value="selected"
+              required
+            />
+            <label for="termsandconditions">
+              I agree to <a href="http://google.com/">terms and conditions</a>
+            </label>
+          </div>
+        </div>
 
-            <!-- terms and conditions checkbox -->
-            <div class="row">
-                <div class="col-25"></div>
-                <div class="col-75">
-                    <input type="checkbox" id="termsandconditions" name="termsandconditions" value="selected"
-                        required />
-                    <label for="termsandconditions">
-                        I agree to <a href="http://google.com/">terms and conditions</a>
-                    </label>
-                </div>
-            </div>
-
-            <div class="button">
-                <input type="submit" value="Submit" />
-            </div>
-
-        </form>
+        <div>
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
     </section>
     <footer>
-        <p>made by joe shajan</p>
+      <p>made by joe shajan</p>
     </footer>
-</body>
-
+  </body>
 </html>
