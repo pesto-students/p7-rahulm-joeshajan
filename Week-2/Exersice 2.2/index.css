@@ -35,23 +35,18 @@ main div {
   width: 150px;
   height: 150px;
   transition: transform 2s ease;
-  z-index: 1;
+  /* z-index: 1; */
+  opacity: 0.999;
 }
 
-main:hover .box1 {
-  transform: rotate(90deg);
-}
-
-main:hover .box2 {
-  transform: rotate(-90deg);
-}
-
-main:hover .box3 {
-  transform: rotate(-90deg);
-}
-
+main:hover .box1,
 main:hover .box4 {
   transform: rotate(90deg);
+}
+
+main:hover .box2,
+main:hover .box3 {
+  transform: rotate(-90deg);
 }
 
 .box1 {
