@@ -1,5 +1,7 @@
-## Week & Exercises
+## Week
 - week 2
+
+## Exercises
 - exercise 2.1
 
 ## Description
