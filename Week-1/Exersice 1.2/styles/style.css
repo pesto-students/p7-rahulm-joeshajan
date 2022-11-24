@@ -1,0 +1,49 @@
+:root {
+    --nav-width: 40px;
+    --header-height: 300px;
+    --bottom-bar-height: 80px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Lato';
+}
+
+nav {
+    float: left;
+    height: calc(100% - var(--bottom-bar-height));
+    width: var(--nav-width);
+    background-color: rgb(240, 240, 240);
+}
+
+section {
+    float: left;
+    height: calc(100% - var(--bottom-bar-height));
+    width: calc(100% - var(--nav-width));
+
+}
+
+.bottom-bar {
+    float: left;
+    height: var(--bottom-bar-height);
+    width: 100%;
+    background-color: rgb(67, 104, 155);
+}
+
+
+header {
+    height: var(--header-height);
+    background-color: rgb(69, 69, 69);
+}
+
+article {
+    height: calc(100% - var(--header-height));
+    background-color: rgb(255, 255, 255);
+}
