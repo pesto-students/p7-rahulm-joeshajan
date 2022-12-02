@@ -28,6 +28,10 @@ article :nth-child(2) img {
 article > div {
   padding: 20px;
 }
+article > p {
+  margin: 0;
+  padding: 20px;
+}
 
 article {
   color: gray;
