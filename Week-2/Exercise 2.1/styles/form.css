@@ -1,6 +1,6 @@
 input[type="text"],
 input[type="email"],
-input[type="number"],
+input[type="tel"],
 select {
   width: 100%;
   padding: 12px;
@@ -11,14 +11,14 @@ select {
 
 input[type="text"]:hover,
 input[type="email"]:hover,
-input[type="number"]:hover,
+input[type="tel"]:hover,
 select:hover {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
-input[type="number"]:focus,
+input[type="tel"]:focus,
 select:focus {
   border: 1px solid #4dccc6;
 }
