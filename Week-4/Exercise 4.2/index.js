@@ -8,7 +8,7 @@ function Teacher(name, age, subject) {
   this.subject = subject;
 }
 
-Object.getPrototypeOf(Teacher.prototype, Person.prototype);
+Object.setPrototypeOf(Teacher.prototype, Person.prototype);
 
 Teacher.prototype.print = function () {
   console.log(`${this.name} is now teaching ${this.subject}`);
