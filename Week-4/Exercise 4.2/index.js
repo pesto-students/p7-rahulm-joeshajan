@@ -5,13 +5,14 @@ function Person(name, age) {
 
 function Teacher(name, age, subject) {
   Person.call(this, name, age);
-  this.subject = subject;
+  // this.subject = subject;
 }
 
 Object.setPrototypeOf(Teacher.prototype, Person.prototype);
 
-Teacher.prototype.teach = function () {
-  console.log(`${this.name} is now teaching ${this.subject}`);
+Teacher.prototype.teach = function (subject) {
+  console.log(`${this.name} is now teaching ${subject}`);
 };
-const joe = new Teacher("joe", 22, "english");
-joe.teach();
+
+const joe = new Teacher("joe", 22);
+joe.teach("english");
