@@ -21,3 +21,6 @@ function findPair(arr, n) {
 
 console.log(findPair([5, 10, 3, 2, 50, 80], 78)); // 1
 console.log(findPair([-10, 20], 30)); // 1
+
+// TC : O(n)
+// SC : O(1)

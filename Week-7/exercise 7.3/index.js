@@ -28,3 +28,6 @@ var sort = function (nums) {
 
 console.log(sort([0, 2, 1, 2, 0])); // [ 0, 0, 1, 2, 2 ]
 console.log(sort([0, 1, 0])); // [ 0, 0, 1 ]
+
+// TC : O(n)
+// SC : O(1)

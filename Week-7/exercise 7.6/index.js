@@ -18,3 +18,6 @@ let arr = [-1, 2, 1, -4];
 let target = 1;
 
 console.log(find3Numbers(arr, target)); // output 2
+
+// TC : O(n^2)
+// SC : O(1)
