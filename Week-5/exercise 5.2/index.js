@@ -1,21 +1,22 @@
-const isVowel = (char) => {
-  return "aeiou".includes(char); // if the character is in the k th position the time complexity will be O(k)
-};
-
 const vowelCount = (str) => {
-  const vowelMap = new Map();
+  const vowelMap = new Map([
+    ["a", 0],
+    ["e", 0],
+    ["i", 0],
+    ["o", 0],
+    ["u", 0],
+  ]);
+
   const strLower = str.toLowerCase(); // time complexity is O(n)
 
   for (let char of strLower) {
-    if (isVowel(char)) {
-      vowelMap.has(char)
-        ? vowelMap.set(char, vowelMap.get(char) + 1)
-        : vowelMap.set(char, 1);
+    if (vowelMap.has(char)) {
+      vowelMap.set(char, vowelMap.get(char) + 1);
     }
   }
-  console.log(vowelMap);
+  return vowelMap;
 };
-vowelCount("Hello how are you");
+console.log(vowelCount("Hello how are you")); // { 'a' => 1, 'e' => 2, 'i' => 0, 'o' => 3, 'u' => 1 }
 
 // map.set(), map.get(), map.has() time complexity will be O(1)
 // and the space complexity for the map will be O(n)
